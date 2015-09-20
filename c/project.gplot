@@ -1,0 +1,11 @@
+set terminal png
+set output outputfile
+set view map
+
+set title "Heat Map generated from output file"
+set cbrange [0:200]
+set palette defined (0 "white", 50 "#ffccc", 100 "#ff9999", 150 "#ff6666",\
+    160 "#ff5050", 175 "#cc0000", 200 "#993333")
+splot filename u 1:2:3 with image
+
+
